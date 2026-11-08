@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saceatry Jewellers | Premium Rose Gold Jewellery Since 1995</title>
+    <meta name="description" content="Saceatry Jewellers - Exquisite Rose Gold Jewellery crafted with passion since 1995. Explore rings, necklaces, earrings and more.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: {
+                            50: '#fdf6f6',
+                            100: '#f9e8e8',
+                            200: '#f3d1d1',
+                            300: '#e8b4b4',
+                            400: '#d98a8a',
+                            500: '#B76E79',
+                            600: '#a05a65',
+                            700: '#854a53',
+                            800: '#6e3e46',
+                            900: '#5c363c',
+                        },
+                        cream: {
+                            50: '#fefdfb',
+                            100: '#fdf9f3',
+                            200: '#faf3e8',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #fdf6f6 0%, #faf3e8 50%, #f9e8e8 100%);
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .product-image {
+            transition: transform 0.5s ease;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-cream-50 text-gray-800 smooth-scroll">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-rose-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-rose-500 rounded-full flex items-center justify-center">
+                        <span class="text-white font-serif font-bold text-lg">S</span>
+                    </div>
+                    <div>
+                        <h1 class="font-serif text-xl md:text-2xl font-semibold text-rose-700 leading-tight">Saceatry</h1>
+                        <p class="text-[10px] md:text-xs tracking-widest text-rose-400 uppercase">Jewellers</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium text-gray-700 hover:text-rose-600 transition">Home</a>
+                    <a href="#collections" class="text-sm font-medium text-gray-700 hover:text-rose-600 transition">Collections</a>
+                    <a href="#about" class="text-sm font-medium text-gray-700 hover:text-rose-600 transition">About</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-rose-600 transition">Contact</a>
+                </nav>
+
+                <!-- Right Icons -->
+                <div class="flex items-center space-x-3">
+                    <a href="https://wa.me/919813423710" target="_blank" 
+                       class="hidden sm:flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <span>WhatsApp</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-rose-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-rose-600 font-medium">Home</a>
+                <a href="#collections" class="block text-gray-700 hover:text-rose-600 font-medium">Collections</a>
+                <a href="#about" class="block text-gray-700 hover:text-rose-600 font-medium">About</a>
+                <a href="#contact" class="block text-gray-700 hover:text-rose-600 font-medium">Contact</a>
+                <a href="https://wa.me/919813423710" target="_blank" class="block bg-green-500 text-white text-center py-2 rounded-full font-medium">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <p class="text-rose-500 font-medium tracking-widest uppercase text-sm mb-4">Since 1995</p>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 leading-tight mb-6">
+                        Timeless <span class="text-rose-600">Rose Gold</span><br>Jewellery
+                    </h1>
+                    <p class="text-gray-600 text-lg mb-8 max-w-lg mx-auto lg:mx-0">
+                        Discover exquisite handcrafted rose gold pieces that celebrate elegance, tradition and modern beauty. Crafted with passion for over 29 years.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#collections" class="inline-flex items-center justify-center px-8 py-3.5 bg-rose-600 hover:bg-rose-700 text-white font-medium rounded-full transition shadow-lg shadow-rose-200">
+                            Explore Collection
+                        </a>
+                        <a href="https://wa.me/919813423710?text=Hello%20Saceatry%20Jewellers%2C%20I%20would%20like%20to%20know%20more%20about%20your%20jewellery%20collection." 
+                           target="_blank"
+                           class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-rose-600 text-rose-600 hover:bg-rose-50 font-medium rounded-full transition">
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image Placeholder -->
+                <div class="relative">
+                    <div class="aspect-square rounded-3xl bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center shadow-2xl overflow-hidden">
+                        <div class="text-center p-8">
+                            <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-white/60 flex items-center justify-center">
+                                <svg class="w-16 h-16 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                                </svg>
+                            </div>
+                            <p class="font-serif text-2xl text-rose-700">Rose Gold Collection</p>
+                            <p class="text-rose-500 text-sm mt-2">Premium Handcrafted Pieces</p>
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-rose-200/50 rounded-full blur-2xl"></div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-rose-300/30 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="collections" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-rose-500 font-medium tracking-widest uppercase text-sm mb-3">Our Collections</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-gray-900">Shop by Category</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                <!-- Category Cards -->
+                <a href="#products" class="group text-center">
+                    <div class="aspect-square rounded-2xl bg-rose-50 group-hover:bg-rose-100 transition flex items-center justify-center mb-3 overflow-hidden">
+                        <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition">
+                            <span class="text-2xl">💍</span>
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-gray-800 group-hover:text-rose-600 transition">Rings</h3>
+                </a>
+
+                <a href="#products" class="group text-center">
+                    <div class="aspect-square rounded-2xl bg-rose-50 group-hover:bg-rose-100 transition flex items-center justify-center mb-3 overflow-hidden">
+                        <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition">
+                            <span class="text-2xl">📿</span>
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-gray-800 group-hover:text-rose-600 transition">Necklaces</h3>
+                </a>
+
+                <a href="#products" class="group text-center">
+                    <div class="aspect-square rounded-2xl bg-rose-50 group-hover:bg-rose-100 transition flex items-center justify-center mb-3 overflow-hidden">
+                        <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition">
+                            <span class="text-2xl">👂</span>
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-gray-800 group-hover:text-rose-600 transition">Earrings</h3>
+                </a>
+
+                <a href="#products" class="group text-center">
+                    <div class="aspect-square rounded-2xl bg-rose-50 group-hover:bg-rose-100 transition flex items-center justify-center mb-3 overflow-hidden">
+                        <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition">
+                            <span class="text-2xl">⌚</span>
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-gray-800 group-hover:text-rose-600 transition">Bracelets</h3>
+                </a>
+
+                <a href="#products" class="group text-center">
+                    <div class="aspect-square rounded-2xl bg-rose-50 group-hover:bg-rose-100 transition flex items-center justify-center mb-3 overflow-hidden">
+                        <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition">
+                            <span class="text-2xl">🔗</span>
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-gray-800 group-hover:text-rose-600 transition">Chains</h3>
+                </a>
+
+                <a href="#products" class="group text-center">
+                    <div class="aspect-square rounded-2xl bg-rose-50 group-hover:bg-rose-100 transition flex items-center justify-center mb-3 overflow-hidden">
+                        <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition">
+                            <span class="text-2xl">✨</span>
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-gray-800 group-hover:text-rose-600 transition">Pendants</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-16 md:py-24 bg-cream-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-rose-500 font-medium tracking-widest uppercase text-sm mb-3">Handpicked for You</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-gray-900">Featured Collection</h2>
+                <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Explore our most loved rose gold pieces. Click on any product to enquire via WhatsApp.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="product-grid">
+                <!-- Products will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Rose Gold -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-rose-500 font-medium tracking-widest uppercase text-sm mb-3">Our Specialty</p>
+                    <h2 class="font-serif text-3xl md:text-4xl font-semibold text-gray-900 mb-6">Why Rose Gold?</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Rose gold is a beautiful alloy of gold and copper that creates a warm, romantic hue. It is highly durable, complements every skin tone, and has become a timeless choice for modern jewellery lovers.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-rose-500 mt-1">✓</span>
+                            <span class="text-gray-700">Warm & romantic tone that flatters all skin tones</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-rose-500 mt-1">✓</span>
+                            <span class="text-gray-700">Highly durable and resistant to tarnish</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-rose-500 mt-1">✓</span>
+                            <span class="text-gray-700">Perfect for everyday wear and special occasions</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-rose-500 mt-1">✓</span>
+                            <span class="text-gray-700">Trendy yet classic — never goes out of style</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-rose-100 to-rose-200 rounded-3xl p-10 text-center">
+                    <div class="font-serif text-6xl text-rose-600 mb-4">29+</div>
+                    <p class="text-xl font-medium text-gray-800 mb-2">Years of Excellence</p>
+                    <p class="text-gray-600">Crafting beautiful jewellery since 1995</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Saceatry -->
+    <section id="about" class="py-16 md:py-24 bg-rose-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <p class="text-rose-500 font-medium tracking-widest uppercase text-sm mb-3">Why Choose Us</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-gray-900">The Saceatry Promise</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🏅</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Premium Quality</h3>
+                    <p class="text-gray-600 text-sm">Finest materials and expert craftsmanship in every piece.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">✋</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Handcrafted</h3>
+                    <p class="text-gray-600 text-sm">Each design is carefully crafted by skilled artisans.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">💬</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Easy Ordering</h3>
+                    <p class="text-gray-600 text-sm">Simply enquire on WhatsApp. Fast & convenient.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🏠</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Trusted Since 1995</h3>
+                    <p class="text-gray-600 text-sm">Serving families with honesty and excellence for decades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-rose-500 font-medium tracking-widest uppercase text-sm mb-3">Get in Touch</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-gray-900">Visit or Contact Us</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Phone</h3>
+                            <p class="text-gray-600">1600347292</p>
+                            <p class="text-gray-600">+91 98134 23710</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Email</h3>
+                            <a href="mailto:saceatry_jwellers@gmail.com" class="text-rose-600 hover:underline">saceatry_jwellers@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Visit Our Store</h3>
+                            <p class="text-gray-600">Come experience our collection in person. We would love to welcome you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp CTA Card -->
+                <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-8 text-white text-center flex flex-col justify-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-semibold mb-3">Order on WhatsApp</h3>
+                    <p class="text-green-100 mb-6 text-sm">Browse our collection and enquire instantly. We reply quickly!</p>
+                    <a href="https://wa.me/919813423710?text=Hello%20Saceatry%20Jewellers%2C%20I%20would%20like%20to%20enquire%20about%20your%20jewellery." 
+                       target="_blank"
+                       class="inline-flex items-center justify-center bg-white text-green-600 font-semibold px-6 py-3 rounded-full hover:bg-green-50 transition">
+                        Start Chat Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-9 h-9 bg-rose-500 rounded-full flex items-center justify-center">
+                            <span class="text-white font-serif font-bold">S</span>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl text-white">Saceatry Jewellers</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Premium Rose Gold Jewellery crafted with passion and precision since 1995. Elegance that lasts a lifetime.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-rose-400 transition">Home</a></li>
+                        <li><a href="#collections" class="hover:text-rose-400 transition">Collections</a></li>
+                        <li><a href="#about" class="hover:text-rose-400 transition">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-rose-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>+91 98134 23710</li>
+                        <li>1600347292</li>
+                        <li><a href="mailto:saceatry_jwellers@gmail.com" class="hover:text-rose-400 transition">saceatry_jwellers@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
+                <p>&copy; 2026 Saceatry Jewellers. All rights reserved. | Since 1995</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919813423710" target="_blank" 
+       class="whatsapp-float bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Sample Products Data
+        const products = [
+            {
+                id: 'RG-R-001',
+                name: 'Classic Rose Gold Band',
+                category: 'Rings',
+                weight: '3.2g',
+                price: 'Price on Request',
+                description: 'Elegant plain rose gold band perfect for everyday wear or as a wedding band.'
+            },
+            {
+                id: 'RG-R-002',
+                name: 'Floral Rose Gold Ring',
+                category: 'Rings',
+                weight: '4.1g',
+                price: 'Price on Request',
+                description: 'Delicate floral design crafted in pure rose gold. A timeless beauty.'
+            },
+            {
+                id: 'RG-N-001',
+                name: 'Rose Gold Chain Necklace',
+                category: 'Necklaces',
+                weight: '8.5g',
+                price: 'Price on Request',
+                description: 'Premium rose gold chain with elegant finish. Perfect for daily wear.'
+            },
+            {
+                id: 'RG-E-001',
+                name: 'Rose Gold Stud Earrings',
+                category: 'Earrings',
+                weight: '2.8g',
+                price: 'Price on Request',
+                description: 'Classic stud earrings in warm rose gold. Lightweight and comfortable.'
+            },
+            {
+                id: 'RG-B-001',
+                name: 'Rose Gold Bracelet',
+                category: 'Bracelets',
+                weight: '6.3g',
+                price: 'Price on Request',
+                description: 'Sophisticated bracelet design that adds elegance to any outfit.'
+            },
+            {
+                id: 'RG-P-001',
+                name: 'Heart Pendant',
+                category: 'Pendants',
+                weight: '3.7g',
+                price: 'Price on Request',
+                description: 'Beautiful heart-shaped pendant in rose gold. Perfect gift for loved ones.'
+            }
+        ];
+
+        // Render Products
+        const productGrid = document.getElementById('product-grid');
+        
+        products.forEach(product => {
+            const message = `Hello Saceatry Jewellers, mujhe ye product chahiye:%0A%0AProduct: ${product.name}%0ACode: ${product.id}%0ACategory: ${product.category}%0AWeight: ${product.weight}%0APrice: ${product.price}`;
+            
+            const card = document.createElement('div');
+            card.className = 'product-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-rose-50';
+            card.innerHTML = `
+                <div class="aspect-square bg-gradient-to-br from-rose-50 to-rose-100 flex items-center justify-center overflow-hidden">
+                    <div class="product-image text-center p-6">
+                        <div class="w-24 h-24 mx-auto mb-3 rounded-full bg-white/70 flex items-center justify-center">
+                            <span class="text-4xl">💎</span>
+                        </div>
+                        <p class="text-rose-400 text-xs font-medium uppercase tracking-wider">${product.category}</p>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-serif text-lg font-semibold text-gray-900 mb-1">${product.name}</h3>
+                    <p class="text-gray-500 text-sm mb-3 line-clamp-2">${product.description}</p>
+                    <div class="flex items-center justify-between text-sm text-gray-600 mb-4">
+                        <span>Code: ${product.id}</span>
+                        <span>${product.weight}</span>
+                    </div>
+                    <a href="https://wa.me/919813423710?text=${message}" 
+                       target="_blank"
+                       class="block w-full text-center bg-rose-600 hover:bg-rose-700 text-white font-medium py-2.5 rounded-full transition">
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+            `;
+            productGrid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
